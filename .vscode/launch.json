@@ -1,35 +1,109 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
-            "name": ".NET Core Launch (web)",
+      {
+        "name": ".NET Core Launch - Firebox",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "requireExactSource": false,
+        "program": "${workspaceFolder}/TestSolAPI/bin/Debug/net6.0/TestSolAPI.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "internalConsoleOptions": "openOnSessionStart",
+        "launchBrowser": {
+          "enabled": true,
+          "args": "${auto-detect-url}",
+          "windows": {
+            "command": "cmd.exe",
+            "args": "/C start \"\" \"C:/Program Files/Firefox Developer Edition/firefox.exe\" ${auto-detect-url}/Swagger"
+          }
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+        },
+        "sourceFileMap": {
+          "/Views": "${workspaceFolder}/Views"
+        }
+      },
+      {
+        "name": ".NET Core Launch - Chrome",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "requireExactSource": false,
+        "program": "${workspaceFolder}/TestSolAPI/bin/Debug/net6.0/TestSolAPI.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "internalConsoleOptions": "openOnSessionStart",
+        "launchBrowser": {
+          "enabled": true,
+          "args": "${auto-detect-url}",
+          "windows": {
+            "command": "cmd.exe",
+            "args": "/C start \"\" \"C:/Program Files/Google/Chrome/Application/chrome.exe\" ${auto-detect-url}/Swagger"
+          }
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+        },
+        "sourceFileMap": {
+          "/Views": "${workspaceFolder}/Views"
+        }
+      },
+          {
+            "name": ".NET Core Launch - Microsoft Edge",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
+            "requireExactSource": false,
             "program": "${workspaceFolder}/TestSolAPI/bin/Debug/net6.0/TestSolAPI.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/TestSolAPI",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+              "enabled": true,
+              "args": "${auto-detect-url}",
+              "windows": {
+                "command": "cmd.exe",
+                "args": "/C start \"\" \"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\" ${auto-detect-url}/Swagger"
+              }
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+              "ASPNETCORE_ENVIRONMENT": "Development",
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
+              "/Views": "${workspaceFolder}/Views"
             }
+          },
+      {
+        "name": ".NET Core Launch - Brave Browser",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "requireExactSource": false,
+        "program": "${workspaceFolder}/TestSolAPI/bin/Debug/net6.0/TestSolAPI.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "internalConsoleOptions": "openOnSessionStart",
+        "launchBrowser": {
+          "enabled": true,
+          "args": "${auto-detect-url}",
+          "windows": {
+            "command": "cmd.exe",
+            "args": "/C start \"\" \"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe\" ${auto-detect-url}/Swagger"
+          }
         },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+        },
+        "sourceFileMap": {
+          "/Views": "${workspaceFolder}/Views"
         }
+      }
     ]
-}
+  }
